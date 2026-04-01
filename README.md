@@ -50,5 +50,11 @@ docker run --rm -p 3001:3001 \
   dragetech-server
 ```
 
+Expected project contents inside the image/container root:
+- `index.html`
+- `styles.css`
+- `js/`
+- `data/`
+- optional: `site-admin.html`, `defaults/`
 
-Mount your website files to `/app` (or copy them into the image).
+If those files are in the repo before build, Docker copies them in automatically via `COPY . .`.

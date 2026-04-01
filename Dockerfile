@@ -1,12 +1,11 @@
-FROM node:24-alpine
+FROM node:current-alpine
 
 WORKDIR /app
 
-COPY package.json .
-RUN npm install --production
+COPY package*.json ./
+RUN npm install --omit=dev
 
-COPY server.js .
-COPY config.ini .
+COPY . .
 
 RUN mkdir -p data
 
