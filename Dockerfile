@@ -1,9 +1,9 @@
-FROM node:current-alpine
+FROM node:26.12.1-alpine
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install --omit=dev
+RUN npm ci --omit=dev
 
 COPY . .
 
