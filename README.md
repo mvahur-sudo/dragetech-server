@@ -4,9 +4,17 @@ Simple Node.js server to serve the Dragetech website.
 
 ## Setup
 
+Use Node.js **26.12.1 Current** (not LTS), pinned in `.nvmrc` and the Docker image.
+With nvm installed:
+
 ```bash
-npm install
+nvm install
+nvm use
+npm ci
 ```
+
+The package engine range supports Node.js 26 starting at 26.12.1. Dependencies
+are locked in `package-lock.json`; Docker also installs them with `npm ci`.
 
 ## Run
 
